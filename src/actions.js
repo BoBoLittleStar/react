@@ -29,16 +29,17 @@ function tick(id) {
 	return {
 		type: "tick",
 		payload: {
-			"id": id
+			"id": id,
+			"date modified": now()
 		}
 	};
 }
 
-function remove(id) {
+function remove(ids) {
 	return {
 		type: "remove",
 		payload: {
-			"id": id
+			"ids": ids
 		}
 	};
 }

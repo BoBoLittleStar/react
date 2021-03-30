@@ -1,5 +1,5 @@
 import moment from "moment";
+const _format = "YYYY-MM-DD HH:mm:ss";
 export function now() {
-	const format = "YYYY-MM-DD HH:mm:ss";
-	return moment().format(format);
+	return moment().format(_format);
 }

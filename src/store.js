@@ -9,7 +9,7 @@ function todos(state = [], action) {
 		case "edit":
 			return state.map(elem => elem["id"] === action.payload["id"] ? {...elem, "task": action.payload["task"], "date modified": action.payload["date modified"]} : elem);
 		case "remove":
-			return state.filter(elem => elem["id"] !== action.payload["id"]);
+			return state.filter(elem => !action.payload["ids"][elem["id"]]);
 		default:
 			return state;
 	}
